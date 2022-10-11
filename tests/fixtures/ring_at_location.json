@@ -1,0 +1,23 @@
+{
+    "host": "aaa-aa-aa-aa-aa.prd.rings.solutions",
+    "ticket": "ticket_id",
+    "subscriptionTopics": [
+        "user:1"
+    ],
+    "assets": [
+        {
+            "uuid": "uuid",
+            "doorbotId": 16,
+            "kind": "three_p_cam",
+            "status": "offline",
+            "onBattery": false
+        },
+        {
+            "uuid": "uuid",
+            "doorbotId": 14,
+            "kind": "three_p_cam",
+            "status": "online",
+            "onBattery": false
+        }
+    ]
+}

@@ -37,6 +37,10 @@ def mock_ring_requests():
             text=load_fixture("ring_chime_health_attrs.json"),
         )
         mock.get(
+            "https://app.ring.com/api/v1/clap/tickets?locationID=mock-location-id",
+            text=load_fixture("ring_at_location.json"),
+        )
+        mock.get(
             "https://api.ring.com/clients_api/doorbots/987652/health",
             text=load_fixture("ring_doorboot_health_attrs.json"),
         )
@@ -82,6 +86,7 @@ def test_basic_attributes(ring):
     assert len(data["doorbots"]) == 1
     assert len(data["authorized_doorbots"]) == 1
     assert len(data["stickup_cams"]) == 1
+    assert len(data["other"]) == 2
 
 
 def test_chime_attributes(ring):
@@ -204,3 +209,14 @@ def test_light_groups(ring):
 
     # Attempt setting lights to invalid value
     group.lights = 30
+
+
+def test_echo_online(ring):
+    data = ring.devices()
+    dev = data["other"][0]
+    dev.update()
+    assert dev.status() == "online"
+
+    dev = data["other"][1]
+    dev.update()
+    assert dev.status() == "offline"

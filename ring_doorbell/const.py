@@ -23,8 +23,9 @@ DEFAULT_VIDEO_DOWNLOAD_TIMEOUT = 120
 
 
 # API endpoints
-API_VERSION = "9"
+API_VERSION = "11"
 API_URI = "https://api.ring.com"
+APP_URI = "https://app.ring.com/api/v1"
 CHIMES_ENDPOINT = "/clients_api/chimes/{0}"
 DEVICES_ENDPOINT = "/clients_api/ring_devices"
 DINGS_ENDPOINT = "/clients_api/dings/active"
@@ -47,6 +48,8 @@ URL_DOORBELL_HISTORY = DOORBELLS_ENDPOINT + "/history"
 URL_RECORDING = "/clients_api/dings/{0}/recording"
 URL_RECORDING_SHARE_PLAY = "/clients_api/dings/{0}/share/play"
 GROUP_DEVICES_ENDPOINT = GROUPS_ENDPOINT + "/{1}/devices"
+
+LOCATION_CONNECTION = "/clap/tickets?locationID={0}"
 
 # chime test sound kinds
 KIND_DING = "ding"

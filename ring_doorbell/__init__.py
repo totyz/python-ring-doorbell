@@ -15,6 +15,7 @@ from .const import (
 from .auth import Auth  # noqa
 from .doorbot import RingDoorBell
 from .chime import RingChime
+from .other import OtherDevice
 from .stickup_cam import RingStickUpCam
 from .group import RingLightGroup
 
@@ -29,6 +30,7 @@ TYPES = {
     "authorized_doorbots": lambda ring, description: RingDoorBell(
         ring, description, shared=True
     ),
+    "other": OtherDevice
 }
 
 
@@ -101,11 +103,11 @@ class Ring(object):
                     self.groups_data[group["device_group_id"]] = group
 
     def query(
-        self, url, method="GET", extra_params=None, data=None, json=None, timeout=None
+        self, url, method="GET", extra_params=None, data=None, json=None, timeout=None, api=API_URI
     ):
         """Query data from Ring API."""
         return self.auth.query(
-            API_URI + url,
+            api + url,
             method=method,
             extra_params=extra_params,
             data=data,

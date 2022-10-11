@@ -262,5 +262,98 @@
             "stolen": false,
             "subscribed": true,
             "subscribed_motions": true,
-            "time_zone": "America/New_York"}]
+            "time_zone": "America/New_York"}],
+        "other": [
+        {
+            "id": 14,
+            "description": "Echo",
+            "hardware_id": "A000FFFFFF",
+            "time_zone": "America/New_York",
+            "kind": "three_p_cam",
+            "stolen": false,
+            "owned": true,
+            "settings": {
+                "enable_vod": 0,
+                "powered_on": null,
+                "supported_capabilities": null,
+                "camera_stream_configurations": []
+            },
+            "features": {
+                "motion_zone_recommendation": false,
+                "motions_enabled": true,
+                "show_recordings": false,
+                "show_vod_settings": true,
+                "show_offline_motion_events": false
+            },
+            "location_id": "mock-location-id",
+            "owner": {
+                "email": "foo@bar.org",
+                "first_name": "Foo",
+                "id": 999999,
+                "last_name": "Bar"
+            },
+            "ring_net_id": "A000EEEEEE",
+            "third_party_manufacturer": "amazon1p",
+            "third_party_model": "A3",
+            "third_party_dsn": "G2A",
+            "third_party_tags": null,
+            "is_sidewalk_gateway": true,
+            "metadata": {
+                "is_sidewalk_gateway": true,
+                "third_party_manufacturer": "amazon1p",
+                "third_party_model": "A3",
+                "third_party_dsn": "G2A"
+            },
+            "deactivated_at": null,
+            "alerts": {
+                "connection": "online"
+            }
+        },
+        {
+            "id": 16,
+            "description": "Echo",
+            "hardware_id": "A000AAAAAA",
+            "time_zone": "America/New_York",
+            "kind": "three_p_cam",
+            "stolen": false,
+            "owned": true,
+            "settings": {
+                "enable_vod": 0,
+                "powered_on": null,
+                "supported_capabilities": null,
+                "camera_stream_configurations": []
+            },
+            "features": {
+                "motion_zone_recommendation": false,
+                "motions_enabled": true,
+                "show_recordings": false,
+                "show_vod_settings": true,
+                "show_offline_motion_events": false
+            },
+            "location_id": "mock-location-id",
+            "owner": {
+                "email": "foo@bar.org",
+                "first_name": "Foo",
+                "id": 999999,
+                "last_name": "Bar"
+            },
+            "ring_net_id": "A000EEEEEE",
+            "third_party_manufacturer": "amazon1p",
+            "third_party_model": "A3",
+            "third_party_dsn": "G3A",
+            "third_party_tags": null,
+            "is_sidewalk_gateway": true,
+            "metadata": {
+                "is_sidewalk_gateway": true,
+                "third_party_manufacturer": "amazon1p",
+                "third_party_model": "A3",
+                "third_party_dsn": "G3A"
+            },
+            "deactivated_at": null,
+            "alerts": {
+                "connection": "online"
+            }
+        }
+    ]
+
 }

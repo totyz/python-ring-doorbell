@@ -1,5 +1,6 @@
 import json
 import getpass
+import logging
 from pathlib import Path
 
 from ring_doorbell import Ring, Auth
@@ -43,7 +44,15 @@ def main():
     print(doorbells)
     print(chimes)
     print(stickup_cams)
+    for echo in devices["other"]:
+        print(echo)
+        echo.update()
+        print(echo.status())
 
 
 if __name__ == "__main__":
+    loggerFormat = "[%(levelname)8s : %(name)10s]\t%(asctime)s:\t%(message)s"
+    loggerFormatter = logging.Formatter(loggerFormat)
+    loggerLevel = logging.DEBUG
+    logging.basicConfig(format=loggerFormat, level=loggerLevel)
     main()
