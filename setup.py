@@ -21,6 +21,7 @@ setup(
     author_email='tchello.mello@gmail.com',
     url='https://github.com/tchellomello/python-ring-doorbell',
     license='LGPLv3+',
+    setup_requires=['wheel'],
     include_package_data=True,
     install_requires=[
         "requests>=2.0.0",
